@@ -1,25 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FJ6-e7-pTk">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Dear Citizen-->
+        <scene sceneID="jvx-GL-5JU">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xjJ-oW-zo9" customClass="ViewController" customModule="GoToJailSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Omz-bU-tXI"/>
+                        <viewControllerLayoutGuide type="bottom" id="fvo-yQ-C50"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="VgF-2v-RxR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The NSA politely requests that you allow access to your location at all times..." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA1-so-t4y">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLk-7U-m24">
+                                <rect key="frame" x="20" y="285" width="95" height="30"/>
+                                <state key="normal" title="Umm....K?"/>
+                                <connections>
+                                    <action selector="startViolatingPrivacy:" destination="xjJ-oW-zo9" eventType="touchUpInside" id="c53-vV-4UH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPH-WC-biX">
+                                <rect key="frame" x="440" y="285" width="140" height="30"/>
+                                <state key="normal" title="Huh?...Um, NO!!!!"/>
+                                <connections>
+                                    <action selector="startViolatingPrivacy:" destination="xjJ-oW-zo9" eventType="touchUpInside" id="fmM-bF-t5y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="YA1-so-t4y" secondAttribute="trailing" constant="-20" id="5lR-LX-ZLd"/>
+                            <constraint firstItem="fvo-yQ-C50" firstAttribute="top" secondItem="YA1-so-t4y" secondAttribute="bottom" id="EuA-fJ-lfB"/>
+                            <constraint firstItem="VPH-WC-biX" firstAttribute="trailing" secondItem="VgF-2v-RxR" secondAttribute="trailingMargin" id="GHo-KU-fEc"/>
+                            <constraint firstItem="HLk-7U-m24" firstAttribute="leading" secondItem="VgF-2v-RxR" secondAttribute="leadingMargin" id="I7f-Kk-MLn"/>
+                            <constraint firstItem="YA1-so-t4y" firstAttribute="leading" secondItem="VgF-2v-RxR" secondAttribute="leadingMargin" constant="-20" id="Lyp-u9-iNE"/>
+                            <constraint firstItem="YA1-so-t4y" firstAttribute="top" secondItem="VgF-2v-RxR" secondAttribute="topMargin" id="bJd-is-ZDU"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Dear Citizen" id="Z3N-5q-eol"/>
+                    <connections>
+                        <outlet property="textView" destination="YA1-so-t4y" id="N0v-HL-MiZ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovf-iD-rch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1925" y="-277"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rck-Zl-VRc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FJ6-e7-pTk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c02-iW-Vw5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xjJ-oW-zo9" kind="relationship" relationship="rootViewController" id="MUP-2p-83r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRh-Z2-h8U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="-277"/>
         </scene>
     </scenes>
 </document>
